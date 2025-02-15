@@ -1,0 +1,9 @@
+<% games.forEach(game => { %>
+    <div class="game-card">
+      <img src="<%= game.background_image %>" alt="<%= game.name %>">
+      <h2><%= game.name %></h2>
+      <p>Rating: <%= game.rating %>/5</p>
+      <a href="<%= game.website %>" target="_blank">More Info</a>
+    </div>
+  <% }); %>
+  
