@@ -1,9 +1,21 @@
-<% games.forEach(game => { %>
-    <div class="game-card">
-      <img src="<%= game.background_image %>" alt="<%= game.name %>">
-      <h2><%= game.name %></h2>
-      <p>Rating: <%= game.rating %>/5</p>
-      <a href="<%= game.website %>" target="_blank">More Info</a>
-    </div>
-  <% }); %>
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Recommendation Website</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Top Game Recommendations</h1>
+  <div class="games-list">
+    <% games.forEach(game => { %>
+      <div class="game-card">
+        <h2><%= game.name %></h2>
+        <img src="<%= game.background_image %>" alt="<%= game.name %>">
+        <p>Rating: <%= game.rating %>/5</p>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>
